@@ -1,0 +1,4 @@
+li {
+  display: grid;
+  grid-template-columns: 1fr 100px 150px 100px;
+}
