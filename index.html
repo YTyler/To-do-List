@@ -1,31 +1,55 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/jquery-3.4.1.js"></script>
-    <script src="js/scripts.js" ></script>
-    <title>List</title>
-  </head>
-  <body>
-    <div class="container">
+<head>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/jquery-3.4.1.js"></script>
+  <script src="js/template.js"></script>
+  <script src="js/scripts.js" ></script>
+  <title>List</title>
+</head>
+<body>
+  <div class="container">
 
     <h1>My To Do List</h1>
-    <ul>
-      <li id='listHead'>
-        <span>Item Details</span>
-        <span>Urgency</span>
-        <span>Deadline</span>
-        <span>Mark Done</span>
-      </li>
-      <li>
-        <span>Name Holder</span>
-        <span>Urgency</span>
-        <span>Deadline</span>
-        <button class="done" type="button" name="done">DONE</button>
-      </li>
-    </ul>
+    <button type="button" id="addNewTask" class="btn btn-secondary btn-lg btn-block">ADD NEW TASK</button>
+    <div class="newTaskInput card">
+      <form id="newTaskForm">
+        <input id='name' type="text" placeholder="Task Name">
+        Urgency:
+        <input type="radio" name='urgency' value="1"> 1
+        <input type="radio" name='urgency' value="2"> 2
+        <input type="radio" name='urgency' value="3"> 3
+        <input type="radio" name='urgency' value="4"> 4
+        <input type="radio" name='urgency' value="5"> 5
+        <input id='deadline' type="date">
+        <button id='submitNew' type="button" name="button">Add</button>
+      </form>
+    </div>
+    <form id="todoForm">
+
+      <ul>
+        <li id='listHead'>
+          <span>Item Details</span>
+          <span>Urgency</span>
+          <span>Deadline</span>
+          <span>Mark</span>
+        </li>
+        <div class="taskDiv">
+          <li>
+            <span>Name Holder</span>
+            <span>Urgency</span>
+            <span>Deadline</span>
+            <input class='mark' type="checkbox" name="mark">
+          </li>
+        </div>
+
+      </ul>
+      <button type="button" id="markDone" class="btn btn-secondary btn-lg btn-block">Mark Completed</button>
+      <button type="button" id="Clear" class="btn btn-secondary btn-lg btn-block">Clear Completed</button>
+    </form>
+
   </div>
 
-  </body>
+</body>
 </html>

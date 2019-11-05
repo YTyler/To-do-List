@@ -2,3 +2,24 @@ li {
   display: grid;
   grid-template-columns: 1fr 100px 150px 100px;
 }
+
+#listHead {
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+.mark {
+  align-items: center;
+}
+
+.newTaskInput {
+  display: none;
+}
+
+#addNewTask {
+
+}
+
+.done {
+  text-decoration: line-through;
+}
